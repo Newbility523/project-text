@@ -1,0 +1,10 @@
+Raycast中最后一个枚举参数可以设置该射线是否和Trigger发生检测。
+UseGlobal也是在Physic中设置
+
+如果光线是从物体没有渲染的那一面照进来，是不会产生阴影的。这需要设置Render.CastShadow为Two side
+
+AddExplosionForce物体所受到的爆炸力不会随距离远而变小，有远近力大小变化的需要自己设置addForce
+
+Invoke可以通过cancleInvoke取消，如果没有指定取消函数，会把所有invoke取消。
+
+InvokeRepet用处思考

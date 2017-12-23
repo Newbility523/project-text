@@ -1,0 +1,16 @@
+meshCollider可以通过物体的网格生成碰撞网格（在美术没有提供低模网格时使用，或者在图形相对简易的情况下使用）
+
+贴图如果满足上下左右可以无缝拼接，则称为缝贴图
+
+sprite素材中，pixel per unit 可以设置多少像素一米。
+
+如果需要设置背景完整贴满摄像头的话（2D）需要设置摄像头像素比和贴图一致，然后在Camera中的size设为实际背景的高的一半。
+
+取去除阴影，可以在场景光源物件上的shadow type中设置。
+
+
+setting中可以旋转 default is full screen是否默认全屏
+ display resolution dialog是否可以开始时选择分辨率
+
+
+通UnityEngine.SceneManager命名空间的LoadScene加载场景。

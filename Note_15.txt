@@ -1,0 +1,19 @@
+预设体内不能拖拽（引用）Heriroky的物体，但可以拽预设体，同时注意，预设体和实际生成的对象又是不一样的。
+
+yield break直接跳出协程，不再执行下面代码
+
+声明周期函数可以将返回值改为IEnumerator，这样就可以在内部用yield进迭代。
+
+通过方法名+()开启的协程只能用stopAllCoroutine取消
+stopCoroutine在协程里面的话，如果后面还有代码，仍然会执行，直到yield return才会真正取消。（也就是取消不会在同一帧内发生作用，一帧内的代码仍会执行。）
+
+绝对路径：以盘符开头
+相对路径：非盘符开头
+
+Resourcs文件夹不一定要直接放在Assets下
+
+unity 中的特殊文件夹
+
+和场景同步和异步加载一样，Resources.load也有异步加载的形式：Resources.LoadAsync
+
+Resources.UnloadUnusedAssets()当场景没有这个资源的实例就会被释放。

@@ -1,0 +1,37 @@
+粒子的使用
+
+在使用Quaternion.AngleAxis获得的是没旋转时，向某个轴旋转后的rotation，如果用transform.rotation 该值，会把物体上的其他旋转覆盖。
+
+单例对象池，动态增减。
+
+实现单例时，脚本已component的形式挂在到gameObject不是已经算是实例化了吗，那单例的new不就没必要了。再说Componet没办法new。想通过静态引用，通过实例化预设的方式new，但静态变量时不会显示出来的
+
+Camera
+clear flags skyboc天空盒/solid color纯色/un不清除（上一针的画面不剔除）设置背景
+back ground 只有在clear flag.solid color 才有效果
+cullmask中设置是和layer相匹配的。选中了什么就显示，而不是挡住什么
+file of view（透视投影）/size（正交投影）的视口大小，太大会变鱼眼镜头（透视投影）
+Clipping Planes远近裁平面
+viewport Rect可以设置分屏，xy画面左下角在屏幕坐标的哪里，wh则时右上角
+Rendering Path渲染路径playersetting标志用导出的setting内的设置，越靠下的选项精度越高。
+
+Target textture可以将摄像机的结果存在一张RenderTexture贴图内(设置渲染贴图就不会再直接渲染到game scense，除非把rendertexture拿出来显示)
+
+occlusion culling 摄像机优化技术，将没看到的暂时剔除。高度旋转有些物体会等会再出现
+
+HDR高动态渲染
+
+Target Display选择在哪个窗口显示（game窗口左上角可以选择display那个窗口）。
+
+
+
+
+
+枪战游戏枪口进墙但是玩家屏幕显示没有变化方法：添加一个摄像机，和原摄像机用一位置，渲染顺序拉后，只渲染枪所在的层级，并设置只渲染深度。
+
+摄像机深度越大，就越后渲染（显示在前面）
+
+Projectsetting.physic可在矩阵中设置碰撞体可碰撞情况。当然也可以在碰撞的时候自己判断检测
+
+试下
+Vector3.SmoothDamp平滑跟随
